@@ -10,4 +10,5 @@ venv/
 .streamlit/
 
 dist/
-.git/
+
+.docs/
