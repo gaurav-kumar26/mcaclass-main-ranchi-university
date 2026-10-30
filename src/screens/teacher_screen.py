@@ -303,8 +303,10 @@ def teacher_screen_login():
     with c1:
         header_dashboard()
     with c2:
-        if st.button("Go back to Home", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
+        if st.button("← Go Back to Login", type='secondary', key='teacher_login_back'):
             st.session_state['login_type'] = None
+            st.session_state['page'] = 'portal'
+            st.session_state.pop('teacher_login_type', None)
             st.rerun()
 
     st.header('Login using password', text_alignment='center')
@@ -358,8 +360,10 @@ def teacher_screen_register():
     with c1:
         header_dashboard()
     with c2:
-        if st.button("Go back to Home", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
-            st.session_state['login_type'] = None
+        if st.button("← Go Back to Login", type='secondary', key='teacher_register_back'):
+            st.session_state["login_type"] = None
+            st.session_state["page"] = "portal"
+            st.session_state.pop("teacher_login_type", None)
             st.rerun()
 
 

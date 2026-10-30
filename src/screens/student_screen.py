@@ -104,8 +104,9 @@ def student_screen():
     with c1:
         header_dashboard()
     with c2:
-        if st.button("Go back to Home", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
-            st.session_state['login_type'] = None
+        if st.button("← Go Back to Login", type='secondary', key='student_back_to_login'):
+            st.session_state["login_type"] = None
+            st.session_state["page"] = "portal"
             reset_student_face_login()
             st.rerun()
 
